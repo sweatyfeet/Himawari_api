@@ -1,0 +1,3 @@
+wktCase,wktLon,wktLat,attributes,year,utc,leap_day,interval,dataName,email
+ZiLrPKZ9KnrcrIqaLdUGfgwdPjGuCMU5nSZKZ4I7,POINT,127.117,35.841,air_temperature&dew_point&relative_humidity&wind_speed&total_precipitable_water&ghi&dni&dhi,2014,true,true,60,Jeon,jjmin416@snu.ac.kr
+ZiLrPKZ9KnrcrIqaLdUGfgwdPjGuCMU5nSZKZ4I7,POINT,127.117,35.841,air_temperature&dew_point&relative_humidity&wind_speed&total_precipitable_water&ghi&dni&dhi,2016,true,true,60,Jeon,jjmin416@snu.ac.kr
