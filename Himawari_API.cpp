@@ -187,14 +187,15 @@ void Himawari::sendRequest()
 			std::cout << "[Error] Curl request failed: " << curl_easy_strerror(errMsg) << std::endl;
 		else
 		{
-			curl_easy_getinfo(handle, CURLINFO_RESPONSE_CODE, resCode);
-			std::cout << "[Report] Response code = " << resCode << "." << std::endl;
-			std::cout << "[Report] Request successful for a dataset." << std::endl;
-
 			// Parsing csv data in the memory.
-			parseResponse(chunk, iter, responseList);
-			std::cout << "[Report] Response data saved: "
-				<< iter->siteName << "_" << iter->names << std::endl << std::endl;
+			try {
+				parseResponse(chunk, iter, responseList);
+				std::cout << "[Report] Response data saved: "
+					<< iter->siteName << "_" << iter->names << std::endl << std::endl;
+			}
+			catch (...) {
+				std::cout << "[Report] Request failed for " << iter->wkt << " of year " << year << ". Probably no available data." << std::endl;
+			}
 		}
 
 		// Cleaning up previous data.
